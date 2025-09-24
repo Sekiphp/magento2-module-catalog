@@ -1,0 +1,16 @@
+{
+  "name": "sekiphp/magento2-module-catalog",
+  "license": "GPL-3.0",
+  "require": {
+    "php": ">=7.4"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Sekiphp\\Catalog\\": ""
+    }
+  }
+}
