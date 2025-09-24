@@ -9,19 +9,19 @@ class Grid extends OriginalGrid
 {
     protected function _prepareColumns()
     {
-        parent::_prepareColumns();
-
-        $this->addColumnBefore(
+        $this->addColumn(
             'attribute_id',
             [
-                'header' => __('Attribute ID'),
-                'index' => 'attribute_id',
-                'type' => 'number',
+                'header' => __('Attribute Id'),
                 'sortable' => true,
-                'filter' => true
-            ],
-            'attribute_code'
+                'index' => 'attribute_id',
+                'filter_index' => 'main_table.attribute_id',
+                'header_css_class' => 'col-attr-code',
+                'column_css_class' => 'col-attr-code'
+            ]
         );
+
+        parent::_prepareColumns();
 
         return $this;
     }
